@@ -1,16 +1,28 @@
+
 <html>
     <head>
-    <script src="script.js"></script>
+    <script src="script.js">  </script>
     <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body onload="test()">
+        <div id="box">
         <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
+<table >
+       <tr><td>Amount</td>
+        <td><input type="number"  id="principal"> </td>
+       </tr> 
+       <tr><td>Interest Rate</td>
+        <td><input type="range"  id="rate" min="0.0" max="10.0" step="0.1" onmousemove="display(this.value)" > <input type="text" id="rate1" style="border:none; text-align:top" readonly disabled="onClick"></input> 
+        </td>
+       </tr>
+        <tr><td> No. of Years</td>
+            <td id="k">
+            </td></tr>
+        
+</table>
+Interest : <span id="result"></span>
+<br>
         <button onclick="compute()">Compute</button>
+      </div>
     </body>
 </html>
